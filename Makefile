@@ -4,9 +4,9 @@ TARGET		:= $(shell uname -r)
 #TARGET		:= 2.6.33.5
 KERNEL_MODULES	:= /lib/modules/$(TARGET)
 # KERNEL_BUILD	:= $(KERNEL_MODULES)/build
-KERNEL_BUILD	:= /usr/src/linux-headers-$(TARGET)
+KERNEL_SRC	:= /usr/src/linux-headers-$(TARGET)
 
-#SYSTEM_MAP	:= $(KERNEL_BUILD)/System.map
+#SYSTEM_MAP	:= $(KERNEL_SRC)/System.map
 SYSTEM_MAP	:= /boot/System.map-$(TARGET)
 
 DRIVER := pmbus pmbus_core adm1275 lm25066 ltc2978 max16064 max34440 max8688 ucd9000 ucd9200 zl6100
