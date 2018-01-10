@@ -27,7 +27,7 @@ all: modules
 # Targets for running make directly in the external module directory:
 
 modules clean:
-	@$(MAKE) -C $(KERNEL_BUILD) M=$(CURDIR) EXTRA_CFLAGS=-I$(CURDIR)/include $@
+	@$(MAKE) -C $(KERNEL_SRC) M=$(CURDIR) EXTRA_CFLAGS=-I$(CURDIR)/include $@
 
 install: modules_install
 
