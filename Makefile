@@ -32,6 +32,5 @@ modules clean:
 install: modules_install
 
 modules_install:
-	mkdir -p $(KERNEL_MODULES)/kernel/$(MOD_SUBDIR)
-	cp $(obj-ko) $(KERNEL_MODULES)/kernel/$(MOD_SUBDIR)
-	depmod -a -F $(SYSTEM_MAP) $(TARGET)
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
+
